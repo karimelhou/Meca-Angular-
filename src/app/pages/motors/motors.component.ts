@@ -1,13 +1,19 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Motor } from '../../types/models';
+import { HomeButtonComponent } from '../../components/ui/button/home-button.component';
+
+
 
 @Component({
   selector: 'app-motors',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, HomeButtonComponent],
   template: `
     <div class="p-8">
+
+    <!-- Home Button -->
+      <app-home-button></app-home-button>
       <div class="flex justify-between items-center mb-6">
         <h1 class="text-2xl font-bold">Motors</h1>
         <button (click)="addNew()" 
